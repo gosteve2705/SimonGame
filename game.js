@@ -9,13 +9,17 @@ function nextSequence(){
 
 
 $('#'+randomChosenColour).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+playSound(randomChosenColour);
 
-var audio = new Audio(`${randomChosenColour}.mp3`);
-audio.play();
 }
 $('.btn').on('click', function() {
 var userChosenColour = $(this).attr("id");
   userClickedPattern.push(userChosenColour);
-
+  playSound(userChosenColour);
   console.log(userClickedPattern);
 });
+
+function playSound(name){
+  var audio = new Audio(`sounds/${name}.mp3`);
+  audio.play();
+}
