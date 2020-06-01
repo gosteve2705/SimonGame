@@ -2,7 +2,26 @@ body {
   text-align: center;
   background-color: #011F3F;
 }
-
+.rule-heading{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3rem;
+  margin:  5%;
+  color: #FEF2BF;
+}
+.gamedemo{
+  padding: 3%;
+  margin:3%;
+}
+.rules{
+  font-family:  cursive;
+  font-size: 1rem;
+  margin:  5%;
+  padding: 3%;
+  color: #FEF2BF;
+}
+.list{
+  padding: 3%;
+}
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
@@ -50,4 +69,24 @@ body {
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+
+.play {
+  background-color: #393E46;
+  margin: 30px;
+  border-radius: 20px;
+  font-family: 'Press Start 2P', cursive;
+  color: #FEF2BF;
+  font-size: 6rem;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  }
+.play:hover{
+  background-color:  #30e3cb;
+  background-image: -webkit-linear-gradient(top, #30e3cb, #393E46);
+  background-image: -moz-linear-gradient(top, #30e3cb, #393E46);
+  background-image: -ms-linear-gradient(top, #30e3cb, #393E46);
+  background-image: -o-linear-gradient(top, #30e3cb, #393E46);
+  background-image: linear-gradient(to bottom, #30e3cb, #393E46);
+  text-decoration: none;
 }

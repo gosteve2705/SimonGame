@@ -3,37 +3,39 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Simon</title>
+  <title>Simon Game</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
 
 <body>
-  <h1 id="level-title">Press A Key to Start</h1>
-  <div class="container">
-    <div class="row">
+<h1 class="rule-heading">Simon Game Rules</h1>
+<ol class='rules'>
+  <li class="list">press any key to Start. </li>
+  <li class="list">Simon will give the first colour. Repeat the Colour by pressing the same color Button.</li>
+  <li class="list">Simon will duplicate the first colour and add one. Repeat these two colours by pressing the same color buttons, in the same order.</li>
+  <li class="list">Simon will duplicate these first two colours and add one.</li>
+  <li class="list">Continue playing as long as you can repeat each sequence of colours correctly.</li>
+  <li class="list">After the 5th, 9th and 13th colours in a sequence, Simon automatically speeds up.</li>
+  <li class="list">If you fail to repeat a sequence exactly, or if you take more than 5 seconds to repeat a signal, Simon responds with a "RAZZ" sound and a Red Background. This means you've lost, and the sequence of colours ends.
+</li>
+</ol>
 
-      <div type="button" id="green" class="btn green">
 
-      </div>
+<div class="row">
 
-      <div type="button" id="red" class="btn red">
-
-      </div>
-    </div>
-
-    <div class="row">
-
-      <div type="button" id="yellow" class="btn yellow">
-
-      </div>
-      <div type="button" id="blue" class="btn blue">
-
-      </div>
-
-    </div>
-
+  <div  >
+<img class="gamedemo"src="https://i.udemycdn.com/redactor/raw/2018-11-22_12-17-15-9e39ea8dd319de8b5a113e444a0d4262.gif" height="30%" width="30%" alt="">
   </div>
+
+  <div >
+<img src="https://i.udemycdn.com/redactor/raw/2018-11-22_13-02-31-ac4fa16ac321cb9133eef978b1d1937b.gif" height="30%" width="30%" alt="">
+  </div>
+</div>
+
+<button type="button" class="play" href="game.html" name="button"> PLAY GAME </button>
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="game.js" charset="utf-8"></script>
 </body>
