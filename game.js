@@ -21,7 +21,7 @@ function nextSequence(){
   gamePattern.push(randomChosenColour);
 $('#'+randomChosenColour).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
 playSound(randomChosenColour);
-console.log('game pattern ' + gamePattern);
+
 
 }
 
@@ -29,7 +29,7 @@ console.log('game pattern ' + gamePattern);
 $('.btn').on('click', function() {
 var userChosenColour = $(this).attr("id");
   userClickedPattern.push(userChosenColour);
-  console.log('user clicked pattern ' + userClickedPattern);
+
   playSound(userChosenColour);
   animatePress(userChosenColour);
   checkAnswer(userClickedPattern.length-1);
@@ -58,7 +58,7 @@ function animatePress(currentColor){
 function checkAnswer(currentLevel){
   if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
 
-       console.log("success");
+
 
        //4. If the user got the most recent answer right in step 3, then check that they have finished their sequence with another if statement.
        if (userClickedPattern.length === gamePattern.length){
@@ -74,13 +74,19 @@ function checkAnswer(currentLevel){
 
        playSound('wrong');
        $('body').addClass('game-over');
+        $("#level-title").text('Game Over, Press Any Key to Restart');
 
        setTimeout(function() {
            $('body').removeClass('game-over');
        }, 200);
-       $("#level-title").text('Game Over, Press Any Key to Restart');
-       startOver();
-       console.log("wrong");
+
+
+
+
+       setTimeout(function() {
+           startOver();
+       }, 200);
+
 
      }
 }
